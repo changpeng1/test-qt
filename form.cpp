@@ -14,6 +14,14 @@ Form::Form(QWidget *parent) :
     QPalette palette;
     palette.setBrush(QPalette::Background,QBrush(pixmap1));
     this->setPalette(palette);
+
+
+    ui->frame->setAutoFillBackground(true);
+    QPixmap fpixmap("/home/changpeng/Downloads/a.jpg");
+    QPixmap fpixmap1=fpixmap.scaled(ui->frame->size(),Qt::IgnoreAspectRatio,Qt::SmoothTransformation);
+    QPalette fpalette;
+    fpalette.setBrush(QPalette::Background,QBrush(fpixmap1));
+    ui->frame->setPalette(fpalette);
 }
 
 Form::~Form()

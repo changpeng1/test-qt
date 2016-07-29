@@ -13,6 +13,8 @@ MainWindow::MainWindow(QWidget *parent) :
     QPalette palette;
     palette.setBrush(QPalette::Background,QBrush(pixmap1));
     this->setPalette(palette);
+    ui->pushButton->setFlat(true);
+    ui->pushButton->setShortcut(QKeySequence(QLatin1String("Left")));
 }
 
 MainWindow::~MainWindow()
@@ -31,4 +33,9 @@ void MainWindow::on_pushButton_2_clicked()
 {
     this->hide();
     form.show();
+}
+
+void MainWindow::on_pushButton_pressed()
+{
+    cout<<"pressed"<<endl;
 }
