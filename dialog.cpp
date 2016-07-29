@@ -21,6 +21,7 @@ Dialog::Dialog(QWidget *parent) :
     QPalette fpalette;
     fpalette.setBrush(QPalette::Background,QBrush(fpixmap1));
     ui->frame->setPalette(fpalette);
+    this->setWindowFlags(Qt::FramelessWindowHint);
 }
 
 Dialog::~Dialog()

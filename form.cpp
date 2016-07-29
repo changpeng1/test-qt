@@ -22,6 +22,8 @@ Form::Form(QWidget *parent) :
     QPalette fpalette;
     fpalette.setBrush(QPalette::Background,QBrush(fpixmap1));
     ui->frame->setPalette(fpalette);
+
+    this->setWindowFlags(Qt::FramelessWindowHint);// 设置标题栏隐藏
 }
 
 Form::~Form()
