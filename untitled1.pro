@@ -15,14 +15,22 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     dialog.cpp \
-    form.cpp
+    form.cpp \
+    mywidget.cpp \
+    mydialog.cpp \
+    mypushbutton.cpp
 
 HEADERS  += mainwindow.h \
     dialog.h \
-    form.h
+    form.h \
+    mywidget.h \
+    mydialog.h \
+    mypushbutton.h
 
 FORMS    += mainwindow.ui \
     dialog.ui \
-    form.ui
+    form.ui \
+    mywidget.ui \
+    mydialog.ui
 
 DISTFILES +=

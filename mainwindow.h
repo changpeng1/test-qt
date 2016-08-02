@@ -4,6 +4,9 @@
 #include <QMainWindow>
 #include "dialog.h"
 #include "form.h"
+#include <QKeyEvent>
+#include "mywidget.h"
+#include "mydialog.h"
 namespace Ui {
 class MainWindow;
 }
@@ -22,12 +25,17 @@ private slots:
     void on_pushButton_2_clicked();
 
     void on_pushButton_pressed();
+    void keyPressEvent(QKeyEvent *event);
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
 
 private:
     Ui::MainWindow *ui;
     Dialog dialog;
     Form form;
-
+    MyWidget mywidget;
+    mydialog mydialog1;
 };
 
 #endif // MAINWINDOW_H

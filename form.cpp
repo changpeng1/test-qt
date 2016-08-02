@@ -1,6 +1,7 @@
 #include "form.h"
 #include "ui_form.h"
 #include "mainwindow.h"
+#include <QDebug>
 extern MainWindow *w;
 Form::Form(QWidget *parent) :
     QWidget(parent),
@@ -25,7 +26,29 @@ Form::Form(QWidget *parent) :
 
     this->setWindowFlags(Qt::FramelessWindowHint);// 设置标题栏隐藏
 }
-
+/*
+void Form::keyPressEvent(QKeyEvent *event)
+{
+    qDebug()<<"key pressed";
+    int keyvalue = event->key();
+    if(keyvalue == Qt::Key_Up)
+    {
+        qDebug()<<"Up key pressed";
+    }
+    else if(keyvalue == Qt::Key_Down)
+    {
+        qDebug()<<"Down key pressed";
+    }
+    else if(keyvalue == Qt::Key_Left)
+    {
+        qDebug()<<"Left key pressed";
+    }
+    else if(keyvalue == Qt::Key_Right)
+    {
+        qDebug()<<"Right key pressed";
+    }
+}
+*/
 Form::~Form()
 {
     delete ui;
